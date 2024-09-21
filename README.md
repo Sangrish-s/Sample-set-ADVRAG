@@ -2,6 +2,10 @@
 
 This project implements an Enhanced Retrieval-Augmented Generation (RAG) system using Streamlit, Mistral AI, and ChromaDB.
 
+## Mistral API key: wOKx3udNkGUEtjzY8wxWQ4OrovxguCej
+
+#### Please use as necessary, this is also the password on the left of the image
+
 ## Setup
 
 1. Clone the repository:

@@ -23,7 +23,7 @@ This project implements an Enhanced Retrieval-Augmented Generation (RAG) system 
 
 4. Create a `.env` file in the project root and add your Mistral API key:
    ```
-   MISTRAL_API_KEY=your_api_key_here
+   MISTRAL_API_KEY= wOKx3udNkGUEtjzY8wxWQ4OrovxguCej
    ```
 
 ## Usage
@@ -33,12 +33,15 @@ This project implements an Enhanced Retrieval-Augmented Generation (RAG) system 
    docker run -p 8501:8501 -v $(pwd):/app --env-file .env enhanced-rag
    ```
 
-2. Open a web browser and go to `http://localhost:8501`
+2. Open a web browser and go to `http://localhost:8088`
 
 3. Use the Streamlit interface to:
    - Upload PDF documents
-   - Process documents
+   - Process documents (Depends on size for 2MB worth of document or more than 250 pages it takes around a Minute)
    - Query the RAG system
+
+4. Please checkout this youtube video for ideal usecase
+   - Link: 
 
 ## Features
 

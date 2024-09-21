@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Docker
+.docker
+
+# Streamlit
+.streamlit/
+
+# Chroma
+.chroma/
+chroma_db/
+
+# Project specific
+*.pdf
+*.log
+*.csv
+*.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Large files
+*.hdf5
+*.h5
+
+# API keys and secrets
+secrets.yaml
+config.yaml
+
+# Mistral and LangChain specific (if any)
+mistral_cache/
+langchain_cache/

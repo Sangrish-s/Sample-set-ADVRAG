@@ -6,7 +6,7 @@ This project implements an Enhanced Retrieval-Augmented Generation (RAG) system 
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/enhanced-rag.git
+   git clone https://github.com/Sangrish-s/enhanced-rag.git
    cd enhanced-rag
    ```
 
@@ -26,10 +26,10 @@ This project implements an Enhanced Retrieval-Augmented Generation (RAG) system 
 
 1. Run the Docker container:
    ```
-   docker run -p 8501:8501 -v $(pwd):/app --env-file .env enhanced-rag
+   docker run -p 8088:8088 -v $(pwd):/app --env-file .env enhanced-rag
    ```
 
-2. Open a web browser and go to `http://localhost:8501`
+2. Open a web browser and go to `http://localhost:8088`
 
 3. Use the Streamlit interface to:
    - Upload PDF documents

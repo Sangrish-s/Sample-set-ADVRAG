@@ -3,6 +3,7 @@ from mistralai import Mistral
 from langchain.text_splitter import TokenTextSplitter
 import chromadb
 from chromadb.config import Settings
+import re
 import PyPDF2
 from tenacity import retry, stop_after_attempt, wait_exponential
 from prompt import ENHANCE_QUERY_PROMPT, SELECT_DOCUMENT_PROMPT, ANSWER_PROMPT, SUMMARIZE_DOCUMENT_PROMPT
@@ -50,9 +51,26 @@ class EnhancedRAG:
         summary = await self.generate_mistral_response(prompt)
         self.summaries[doc_name] = summary
         return summary
+    
+    def clean_collection_name(self, name: str) -> str:
+        # Remove file extension
+        name = name.rsplit('.', 1)[0]
+
+        # Remove special characters and replace spaces with underscores
+        cleaned_name = re.sub(r'[^a-zA-Z0-9_\-]', '', name.replace(' ', '_'))
+        
+        # Ensure the name starts and ends with an alphanumeric character
+        cleaned_name = re.sub(r'^[_\-]+', '', cleaned_name)
+        cleaned_name = re.sub(r'[_\-]+$', '', cleaned_name)
+        
+        # Limit the name to 63 characters
+        cleaned_name = cleaned_name[:63]
+        
+        return cleaned_name
 
     async def process_and_add_document(self, document: str, doc_name: str):
-        collection_name = f"collection_{doc_name.replace('.pdf', '')}"
+        collection_name = self.clean_collection_name(doc_name)
+        print(collection_name)
         collection = self.chroma_client.get_or_create_collection(collection_name)
         self.collections[doc_name] = collection
 
@@ -131,3 +149,5 @@ class EnhancedRAG:
             doc_name = uploaded_file.name
             doc_text = await self.read_pdf(uploaded_file)
             await self.process_and_add_document(doc_text, doc_name)
+        
+    

@@ -2,6 +2,10 @@
 
 This project implements an Enhanced Retrieval-Augmented Generation (RAG) system using Streamlit, Mistral AI, and ChromaDB.
 
+## Mistral API key: wOKx3udNkGUEtjzY8wxWQ4OrovxguCej
+
+#### Please use as necessary, this is also the password on the left of the image
+
 ## Setup
 
 1. Clone the repository:
@@ -19,7 +23,7 @@ This project implements an Enhanced Retrieval-Augmented Generation (RAG) system 
 
 4. Create a `.env` file in the project root and add your Mistral API key:
    ```
-   MISTRAL_API_KEY=your_api_key_here
+   MISTRAL_API_KEY= wOKx3udNkGUEtjzY8wxWQ4OrovxguCej
    ```
 
 ## Usage
@@ -33,8 +37,11 @@ This project implements an Enhanced Retrieval-Augmented Generation (RAG) system 
 
 3. Use the Streamlit interface to:
    - Upload PDF documents
-   - Process documents
+   - Process documents (Depends on size for 2MB worth of document or more than 250 pages it takes around a Minute)
    - Query the RAG system
+
+4. Please checkout this youtube video for ideal usecase
+   - Link: 
 
 ## Features
 

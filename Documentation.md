@@ -1,5 +1,9 @@
 # Enhanced RAG System Documentation
 
+# Mistral API : wOKx3udNkGUEtjzY8wxWQ4OrovxguCej
+
+### Please use this for all purposes
+
 ## System Overview
 
 The Enhanced RAG (Retrieval-Augmented Generation) system is designed to provide intelligent responses to queries by leveraging a knowledge base of uploaded documents. It combines the power of Mistral AI for language processing, ChromaDB for efficient vector storage and retrieval, and Streamlit for a user-friendly interface.
